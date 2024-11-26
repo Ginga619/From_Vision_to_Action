@@ -1,3 +1,9 @@
+import os
+
+# Check if libGL is available in the environment
+print("Checking for libGL...")
+os.system("ldconfig -p | grep libGL")
+
 import cvzone
 import cv2
 import numpy as np
@@ -8,7 +14,7 @@ import time
 import google.generativeai as genai
 
 from dotenv import load_dotenv
-import os
+
 load_dotenv()
 api_key = os.getenv("google_api")
 
